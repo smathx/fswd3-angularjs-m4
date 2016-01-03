@@ -8,8 +8,8 @@
 'use strict';
 
 angular.module('confusionApp')
-//.constant('baseURL', 'http://localhost:3000/')
-.constant('baseURL', 'http://fswd3-angularjs-smathx.c9users.io:8080/')
+.constant('baseURL', 'http://localhost:3000/')
+//.constant('baseURL', 'http://fswd3-angularjs-smathx.c9users.io:8080/')
 .service('menuFactory', ['$resource', 'baseURL', function ($resource, baseURL) {
 
   this.getDishes = function () {
@@ -42,7 +42,7 @@ angular.module('confusionApp')
 
   var feedfac = {};
 
-  // Only need POST and GET so no custom actions defined.
+  // Only need POST so no custom actions defined.
   feedfac.getFeedback = function () {
     return $resource(baseURL + 'feedback/:id');
   };
